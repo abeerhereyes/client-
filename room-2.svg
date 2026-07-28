@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-label="Placeholder: double room">
+  <rect width="640" height="420" fill="#f4faf7"/>
+  <rect x="40" y="50" width="560" height="290" rx="12" fill="#fff" stroke="#cfe0d8" stroke-width="2"/>
+  <rect x="70" y="200" width="160" height="90" fill="#c4a574"/>
+  <rect x="250" y="200" width="160" height="90" fill="#c4a574"/>
+  <rect x="460" y="120" width="100" height="140" fill="#8a7355"/>
+  <text x="320" y="385" text-anchor="middle" font-family="Lexend, sans-serif" font-size="22" fill="#0e6b56">Room photo 2 — Double room</text>
+</svg>

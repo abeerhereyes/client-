@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Placeholder photo of the premises">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d5ebe3"/>
+      <stop offset="100%" stop-color="#f4faf7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <rect y="340" width="800" height="160" fill="#d7c8ae"/>
+  <rect x="180" y="160" width="440" height="220" fill="#fff" stroke="#0e6b56" stroke-width="4"/>
+  <polygon points="160,160 400,60 640,160" fill="#0e6b56"/>
+  <rect x="250" y="220" width="80" height="70" fill="#9ecfbf"/>
+  <rect x="470" y="220" width="80" height="70" fill="#9ecfbf"/>
+  <rect x="360" y="280" width="80" height="100" fill="#8a5e14"/>
+  <text x="400" y="470" text-anchor="middle" font-family="Lexend, sans-serif" font-size="26" fill="#3d5249">Replace with a photo of your home</text>
+</svg>

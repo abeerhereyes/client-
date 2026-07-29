@@ -18,14 +18,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
 
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#top">
-        <img class="brand-logo" src="images/logo.svg" width="44" height="44" alt="">
+        <img class="brand-logo" src="images/logo.png" width="44" height="44" alt="">
         <span class="brand-text">
           <span class="brand-name">Kavya Girls Hostel</span>
           <span class="brand-tag">Patna</span>
@@ -47,7 +47,7 @@
     <!-- Hero: brand + one line + CTAs + full-bleed visual -->
     <section class="hero" id="about" aria-labelledby="about-heading">
       <div class="hero-media" aria-hidden="true">
-        <img src="images/premises.svg" width="1200" height="750" alt="" loading="eager" decoding="async">
+        <img src="images/premises.jpeg" width="901" height="470" alt="" loading="eager" decoding="async">
       </div>
       <div class="hero-scrim"></div>
       <div class="hero-content container">
@@ -267,8 +267,22 @@
             </ul>
           </div>
         </div>
+
+        <button type="button" class="rules-link" onclick="document.getElementById('menuDialog').showModal()">
+          साप्ताहिक मेन्यू देखें (View Weekly Menu)
+        </button>
       </div>
     </section>
+
+    <dialog id="menuDialog" class="rules-modal">
+      <div class="rules-modal-inner">
+        <div class="rules-modal-head">
+          <h2>Kavya Rasoi — Weekly Menu</h2>
+          <button type="button" class="rules-close" aria-label="Close" onclick="document.getElementById('menuDialog').close()">&times;</button>
+        </div>
+        <img src="images/tiffin-menu.png" width="1696" height="2400" alt="Kavya Rasoi weekly tiffin menu in Hindi" class="menu-image">
+      </div>
+    </dialog>
 
     <!-- Contact -->
     <section class="section contact reveal" id="contact" aria-labelledby="contact-heading">

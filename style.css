@@ -150,6 +150,7 @@ strong { font-weight: 600; }
 .brand-logo {
   width: 44px;
   height: 44px;
+  object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 4px 14px rgba(194, 42, 30, 0.25);
 }
@@ -764,6 +765,24 @@ strong { font-weight: 600; }
 
 .rules-modal ul { padding-left: 1.1rem; }
 .rules-modal li { margin-bottom: 0.35rem; }
+
+.menu-image {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Tiffin section button uses the same pill style as .rules-link */
+.section.tiffin .rules-link {
+  border-color: var(--whatsapp);
+  color: var(--whatsapp-deep);
+}
+
+.section.tiffin .rules-link:hover {
+  background: var(--whatsapp);
+  color: #fff;
+}
 
 /* ---------- Footer ---------- */
 .site-footer {

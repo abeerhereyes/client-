@@ -1,23 +1,23 @@
 /*
-  Shefali Home — modern visual system
-  One font (Lexend), teal–gold palette, large readable type.
+  Kavya Girls Hostel — modern visual system
+  One font (Lexend), red-on-yellow girlie palette, large readable type.
 */
 
 :root {
-  --ink: #12201c;
-  --ink-soft: #3d5249;
-  --brand: #0e6b56;
-  --brand-deep: #084536;
-  --brand-mist: #e4f2ed;
-  --brand-wash: #f3f8f6;
-  --gold: #c4892a;
-  --gold-soft: #f7efd8;
-  --surface: #ffffff;
-  --surface-glass: rgba(255, 255, 255, 0.78);
-  --line: #d0e2da;
+  --ink: #6b1a12;
+  --ink-soft: #9a3226;
+  --brand: #c22a1e;
+  --brand-deep: #8f1c13;
+  --brand-mist: #fde3d8;
+  --brand-wash: #fffbe9;
+  --gold: #e0578a;
+  --gold-soft: #fde0ec;
+  --surface: #fffdf6;
+  --surface-glass: rgba(255, 251, 233, 0.85);
+  --line: #f6c9a8;
   --whatsapp: #128c7e;
   --whatsapp-deep: #0e6f64;
-  --focus: #e8b84a;
+  --focus: #e0578a;
 
   --font: "Lexend", system-ui, sans-serif;
   --text: 1.125rem;
@@ -40,8 +40,8 @@
   --header-h: 4.25rem;
   --dock-h: 4.75rem;
   --ease: 200ms cubic-bezier(0.22, 1, 0.36, 1);
-  --shadow: 0 18px 40px rgba(8, 69, 54, 0.12);
-  --shadow-soft: 0 6px 20px rgba(18, 32, 28, 0.06);
+  --shadow: 0 18px 40px rgba(143, 28, 19, 0.12);
+  --shadow-soft: 0 6px 20px rgba(107, 26, 18, 0.06);
 }
 
 *,
@@ -60,9 +60,9 @@ body {
   line-height: var(--line);
   color: var(--ink);
   background:
-    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(196, 137, 42, 0.14), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 0% 30%, rgba(14, 107, 86, 0.12), transparent 45%),
-    linear-gradient(180deg, #e8f4ef 0%, var(--brand-wash) 24%, var(--brand-wash) 100%);
+    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(224, 87, 138, 0.14), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 30%, rgba(194, 42, 30, 0.10), transparent 45%),
+    linear-gradient(180deg, #fff6d6 0%, var(--brand-wash) 24%, var(--brand-wash) 100%);
   background-attachment: fixed;
   padding-bottom: calc(var(--dock-h) + 1rem);
 }
@@ -122,7 +122,7 @@ strong { font-weight: 600; }
   background: var(--surface-glass);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
-  border-bottom: 1px solid rgba(208, 226, 218, 0.8);
+  border-bottom: 1px solid rgba(246, 201, 168, 0.8);
 }
 
 .header-inner {
@@ -151,7 +151,7 @@ strong { font-weight: 600; }
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(14, 107, 86, 0.25);
+  box-shadow: 0 4px 14px rgba(194, 42, 30, 0.25);
 }
 
 .brand-text { display: flex; flex-direction: column; min-width: 0; gap: 0.05rem; }
@@ -215,7 +215,7 @@ strong { font-weight: 600; }
 .btn-primary {
   background: var(--brand);
   color: #fff;
-  box-shadow: 0 10px 24px rgba(14, 107, 86, 0.28);
+  box-shadow: 0 10px 24px rgba(194, 42, 30, 0.28);
 }
 
 .btn-primary:hover { background: var(--brand-deep); color: #fff; }
@@ -281,8 +281,8 @@ strong { font-weight: 600; }
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(8, 69, 54, 0.35) 0%, rgba(8, 69, 54, 0.72) 55%, rgba(8, 69, 54, 0.92) 100%),
-    radial-gradient(ellipse at 20% 20%, rgba(196, 137, 42, 0.25), transparent 45%);
+    linear-gradient(180deg, rgba(143, 28, 19, 0.35) 0%, rgba(143, 28, 19, 0.72) 55%, rgba(143, 28, 19, 0.92) 100%),
+    radial-gradient(ellipse at 20% 20%, rgba(224, 87, 138, 0.25), transparent 45%);
 }
 
 .hero-content {
@@ -423,9 +423,9 @@ strong { font-weight: 600; }
 
 .room.featured {
   background:
-    linear-gradient(145deg, rgba(14, 107, 86, 0.08), transparent 50%),
+    linear-gradient(145deg, rgba(194, 42, 30, 0.08), transparent 50%),
     var(--surface);
-  border-color: rgba(14, 107, 86, 0.28);
+  border-color: rgba(194, 42, 30, 0.28);
 }
 
 .room-tag {
@@ -669,8 +669,8 @@ strong { font-weight: 600; }
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
-  border: 1px solid rgba(208, 226, 218, 0.95);
-  box-shadow: 0 16px 40px rgba(8, 69, 54, 0.18);
+  border: 1px solid rgba(246, 201, 168, 0.95);
+  box-shadow: 0 16px 40px rgba(143, 28, 19, 0.18);
 }
 
 .dock-btn {
@@ -692,16 +692,89 @@ strong { font-weight: 600; }
 .dock-wa { background: var(--whatsapp); }
 .dock-btn:hover { color: #fff; filter: brightness(1.05); }
 
+/* ---------- Rules modal ---------- */
+.rules-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: var(--space-3);
+  background: none;
+  border: 2px solid var(--brand);
+  color: var(--brand);
+  font-family: var(--font);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background var(--ease), color var(--ease);
+}
+
+.rules-link:hover { background: var(--brand); color: #fff; }
+
+.rules-modal {
+  border: none;
+  padding: 0;
+  border-radius: var(--radius);
+  max-width: min(92vw, 40rem);
+  width: 100%;
+  max-height: 85vh;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.rules-modal::backdrop {
+  background: rgba(107, 26, 18, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.rules-modal-inner {
+  padding: var(--space-4);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.rules-modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.rules-modal h2 { margin: 0; }
+
+.rules-close {
+  flex-shrink: 0;
+  border: none;
+  background: var(--brand-mist);
+  color: var(--brand-deep);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.rules-modal h3 {
+  color: var(--brand-deep);
+  margin-top: var(--space-3);
+}
+
+.rules-modal ul { padding-left: 1.1rem; }
+.rules-modal li { margin-bottom: 0.35rem; }
+
 /* ---------- Footer ---------- */
 .site-footer {
-  background: linear-gradient(160deg, var(--brand-deep), #052e25);
-  color: #e4f2ed;
+  background: linear-gradient(160deg, var(--brand-deep), #4a0e08);
+  color: #fde3d8;
   padding: var(--space-5) 0 var(--space-4);
   text-align: center;
 }
 
 .site-footer p { margin: 0 0 var(--space-1); }
-.footer-note { color: #9fc4b5; font-size: var(--text-sm); }
+.footer-note { color: #f2b8a6; font-size: var(--text-sm); }
 
 /* ---------- Reveal ---------- */
 .reveal {
@@ -744,7 +817,7 @@ strong { font-weight: 600; }
   }
 
   .room-bento {
-    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .room.featured { grid-row: span 1; }

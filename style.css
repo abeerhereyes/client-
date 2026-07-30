@@ -150,7 +150,6 @@ strong { font-weight: 600; }
 .brand-logo {
   width: 44px;
   height: 44px;
-  object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 4px 14px rgba(194, 42, 30, 0.25);
 }

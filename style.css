@@ -9,11 +9,11 @@
   --brand: #c81e0f;
   --brand-deep: #8f1208;
   --brand-mist: #ffe9a8;
-  --brand-wash: #fff8dc;
+  /* --brand-wash: #fff8dc; */
   --gold: #d99a00;
   --gold-soft: #fff3d6;
   --surface: #fffaf0;
-  --surface-glass: rgba(255, 248, 220, 0.92);
+  /* --surface-glass: rgba(255, 248, 220, 0.92); */
   --border: #eec55c;
   --whatsapp: var(--brand);
   --whatsapp-deep: var(--brand-deep);

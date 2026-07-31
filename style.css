@@ -1,30 +1,30 @@
 /*
   Kavya Girls Hostel — modern visual system
-  One font (Lexend), red-on-yellow girlie palette, large readable type.
+  One font (Lexend), yellow + red only.
 */
 
 :root {
-  --ink: #6b1a12;
-  --ink-soft: #9a3226;
-  --brand: #c22a1e;
-  --brand-deep: #8f1c13;
-  --brand-mist: #fde3d8;
-  --brand-wash: #fffbe9;
-  --gold: #e0578a;
-  --gold-soft: #fde0ec;
-  --surface: #fffdf6;
-  --surface-glass: rgba(255, 251, 233, 0.85);
-  --line: #f6c9a8;
-  --whatsapp: #128c7e;
-  --whatsapp-deep: #0e6f64;
-  --focus: #e0578a;
+  --ink: #8f1208;
+  --ink-soft: #b81f12;
+  --brand: #d41f12;
+  --brand-deep: #9a1208;
+  --brand-mist: #ffe566;
+  --brand-wash: #fff3a0;
+  --gold: #ffd100;
+  --gold-soft: #ffe98a;
+  --surface: #fff6c2;
+  --surface-glass: rgba(255, 243, 160, 0.9);
+  --border: #f5c400;
+  --whatsapp: #d41f12;
+  --whatsapp-deep: #9a1208;
+  --focus: #ffd100;
 
   --font: "Lexend", system-ui, sans-serif;
   --text: 1.125rem;
   --text-sm: 1rem;
   --text-lg: 1.25rem;
   --text-xl: clamp(1.75rem, 5vw, 2.35rem);
-  --line: 1.65;
+  --leading: 1.65;
 
   --space-1: 0.5rem;
   --space-2: 0.75rem;
@@ -40,8 +40,8 @@
   --header-h: 4.25rem;
   --dock-h: 4.75rem;
   --ease: 200ms cubic-bezier(0.22, 1, 0.36, 1);
-  --shadow: 0 18px 40px rgba(143, 28, 19, 0.12);
-  --shadow-soft: 0 6px 20px rgba(107, 26, 18, 0.06);
+  --shadow: 0 18px 40px rgba(154, 18, 8, 0.14);
+  --shadow-soft: 0 6px 20px rgba(143, 18, 8, 0.08);
 }
 
 *,
@@ -57,12 +57,12 @@ body {
   margin: 0;
   font-family: var(--font);
   font-size: var(--text);
-  line-height: var(--line);
+  line-height: var(--leading);
   color: var(--ink);
   background:
-    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(224, 87, 138, 0.14), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 0% 30%, rgba(194, 42, 30, 0.10), transparent 45%),
-    linear-gradient(180deg, #fff6d6 0%, var(--brand-wash) 24%, var(--brand-wash) 100%);
+    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(255, 209, 0, 0.35), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 30%, rgba(212, 31, 18, 0.12), transparent 45%),
+    linear-gradient(180deg, #ffe566 0%, var(--brand-wash) 24%, var(--brand-wash) 100%);
   background-attachment: fixed;
   padding-bottom: calc(var(--dock-h) + 1rem);
 }
@@ -94,7 +94,7 @@ h1, h2, h3 {
   margin: 0 0 var(--space-2);
 }
 
-h1 { font-size: var(--text-xl); color: #fff; }
+h1 { font-size: var(--text-xl); color: var(--gold); }
 h2 { font-size: var(--text-lg); }
 h3, .subheading {
   font-size: var(--text);
@@ -122,7 +122,7 @@ strong { font-weight: 600; }
   background: var(--surface-glass);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
-  border-bottom: 1px solid rgba(246, 201, 168, 0.8);
+  border-bottom: 1px solid rgba(245, 196, 0, 0.7);
 }
 
 .header-inner {
@@ -148,10 +148,10 @@ strong { font-weight: 600; }
 .brand:hover { color: inherit; }
 
 .brand-logo {
-  width: 44px;
+  width: 80px;
   height: 44px;
   border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(194, 42, 30, 0.25);
+  box-shadow: 0 4px 14px rgba(212, 31, 18, 0.28);
 }
 
 .brand-text { display: flex; flex-direction: column; min-width: 0; gap: 0.05rem; }
@@ -214,31 +214,31 @@ strong { font-weight: 600; }
 
 .btn-primary {
   background: var(--brand);
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(194, 42, 30, 0.28);
+  color: var(--gold);
+  box-shadow: 0 10px 24px rgba(212, 31, 18, 0.3);
 }
 
-.btn-primary:hover { background: var(--brand-deep); color: #fff; }
+.btn-primary:hover { background: var(--brand-deep); color: var(--gold); }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.14);
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 209, 0, 0.18);
+  color: var(--gold);
+  border-color: rgba(255, 209, 0, 0.55);
   backdrop-filter: blur(8px);
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.24);
-  color: #fff;
+  background: rgba(255, 209, 0, 0.3);
+  color: var(--gold);
 }
 
 .btn-whatsapp {
   background: var(--whatsapp);
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(18, 140, 126, 0.25);
+  color: var(--gold);
+  box-shadow: 0 10px 24px rgba(212, 31, 18, 0.28);
 }
 
-.btn-whatsapp:hover { background: var(--whatsapp-deep); color: #fff; }
+.btn-whatsapp:hover { background: var(--whatsapp-deep); color: var(--gold); }
 
 .btn-large {
   min-height: 3.4rem;
@@ -281,8 +281,8 @@ strong { font-weight: 600; }
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(143, 28, 19, 0.35) 0%, rgba(143, 28, 19, 0.72) 55%, rgba(143, 28, 19, 0.92) 100%),
-    radial-gradient(ellipse at 20% 20%, rgba(224, 87, 138, 0.25), transparent 45%);
+    linear-gradient(180deg, rgba(154, 18, 8, 0.4) 0%, rgba(154, 18, 8, 0.75) 55%, rgba(154, 18, 8, 0.92) 100%),
+    radial-gradient(ellipse at 20% 20%, rgba(255, 209, 0, 0.22), transparent 45%);
 }
 
 .hero-content {
@@ -291,13 +291,13 @@ strong { font-weight: 600; }
 }
 
 .hero-eyebrow {
-  background: rgba(255, 255, 255, 0.14);
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 209, 0, 0.18);
+  color: var(--gold);
+  border-color: rgba(255, 209, 0, 0.4);
 }
 
 .hero .lead {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--gold-soft);
   max-width: 28rem;
   margin-bottom: var(--space-4);
 }
@@ -316,7 +316,7 @@ strong { font-weight: 600; }
   height: 4px;
   margin-top: var(--space-2);
   border-radius: var(--radius-pill);
-  background: linear-gradient(90deg, var(--gold), #fff);
+  background: linear-gradient(90deg, var(--gold), var(--brand-mist));
 }
 
 /* ---------- Shared bits ---------- */
@@ -328,7 +328,7 @@ strong { font-weight: 600; }
   font-weight: 600;
   color: var(--brand);
   background: var(--brand-mist);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: var(--radius-pill);
 }
 
@@ -353,7 +353,7 @@ strong { font-weight: 600; }
 
 .about-grid {
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: calc(var(--radius) + 0.25rem);
   padding: var(--space-4);
   box-shadow: var(--shadow);
@@ -371,8 +371,8 @@ strong { font-weight: 600; }
   text-align: center;
   padding: var(--space-3) var(--space-2);
   border-radius: var(--radius);
-  background: linear-gradient(160deg, var(--brand-mist), #fff);
-  border: 1px solid var(--line);
+  background: linear-gradient(160deg, var(--brand-mist), var(--surface));
+  border: 1px solid var(--border);
 }
 
 .trust-value {
@@ -393,7 +393,7 @@ strong { font-weight: 600; }
   font-size: var(--text);
   color: var(--ink-soft);
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-left: 4px solid var(--gold);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
@@ -403,7 +403,7 @@ strong { font-weight: 600; }
 /* ---------- Bento / panels ---------- */
 .bento-card {
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
@@ -423,9 +423,9 @@ strong { font-weight: 600; }
 
 .room.featured {
   background:
-    linear-gradient(145deg, rgba(194, 42, 30, 0.08), transparent 50%),
+    linear-gradient(145deg, rgba(212, 31, 18, 0.1), transparent 50%),
     var(--surface);
-  border-color: rgba(194, 42, 30, 0.28);
+  border-color: rgba(212, 31, 18, 0.35);
 }
 
 .room-tag {
@@ -470,7 +470,7 @@ strong { font-weight: 600; }
   gap: 0.7rem;
   padding: 0.9rem 1rem;
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   font-size: var(--text);
   font-weight: 500;
@@ -499,7 +499,7 @@ strong { font-weight: 600; }
   margin: 0;
   overflow: hidden;
   border-radius: var(--radius);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow-soft);
   aspect-ratio: 16 / 9;
@@ -517,7 +517,7 @@ strong { font-weight: 600; }
 /* ---------- Tiffin ---------- */
 .section.tiffin {
   background:
-    linear-gradient(180deg, transparent, rgba(247, 239, 216, 0.55) 12%, rgba(247, 239, 216, 0.35) 100%);
+    linear-gradient(180deg, transparent, rgba(255, 229, 102, 0.45) 12%, rgba(255, 229, 102, 0.28) 100%);
 }
 
 .menu-grid {
@@ -532,7 +532,7 @@ strong { font-weight: 600; }
   gap: 0.55rem;
   margin-bottom: var(--space-2);
   padding-bottom: var(--space-2);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border);
 }
 
 .menu-head h3 { margin: 0; }
@@ -544,8 +544,8 @@ strong { font-weight: 600; }
   border: 2px solid currentColor;
 }
 
-.dot.veg { color: #1f8a4c; background: #1f8a4c; }
-.dot.nonveg { color: #b33b2c; background: #b33b2c; }
+.dot.veg { color: var(--gold); background: var(--gold); }
+.dot.nonveg { color: var(--brand); background: var(--brand); }
 
 .menu-panel ul { margin: 0; }
 
@@ -559,7 +559,7 @@ strong { font-weight: 600; }
   margin: 0;
   padding: 0;
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -572,7 +572,7 @@ strong { font-weight: 600; }
   align-items: baseline;
   gap: var(--space-3);
   padding: 1rem 1.15rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border);
   font-size: var(--text);
 }
 
@@ -589,12 +589,12 @@ strong { font-weight: 600; }
 
 /* ---------- Contact ---------- */
 .section.contact {
-  background: linear-gradient(180deg, var(--brand-mist), rgba(228, 242, 237, 0.4));
+  background: linear-gradient(180deg, var(--brand-mist), rgba(255, 209, 0, 0.35));
 }
 
 .contact-shell {
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: calc(var(--radius) + 0.15rem);
   padding: var(--space-4);
   box-shadow: var(--shadow);
@@ -638,8 +638,8 @@ strong { font-weight: 600; }
   width: 100%;
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--line);
+  border: 1px solid var(--border);
+  background: var(--border);
   aspect-ratio: 16 / 10;
   min-height: 240px;
   box-shadow: var(--shadow-soft);
@@ -666,11 +666,11 @@ strong { font-weight: 600; }
   gap: 0.55rem;
   padding: 0.55rem;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 243, 160, 0.95);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
-  border: 1px solid rgba(246, 201, 168, 0.95);
-  box-shadow: 0 16px 40px rgba(143, 28, 19, 0.18);
+  border: 1px solid rgba(245, 196, 0, 0.95);
+  box-shadow: 0 16px 40px rgba(154, 18, 8, 0.2);
 }
 
 .dock-btn {
@@ -683,14 +683,14 @@ strong { font-weight: 600; }
   text-decoration: none;
   font-weight: 600;
   font-size: var(--text);
-  color: #fff;
+  color: var(--gold);
   transition: transform var(--ease), filter var(--ease);
 }
 
 .dock-btn:active { transform: scale(0.98); }
 .dock-call { background: var(--brand); }
-.dock-wa { background: var(--whatsapp); }
-.dock-btn:hover { color: #fff; filter: brightness(1.05); }
+.dock-wa { background: var(--brand-deep); }
+.dock-btn:hover { color: var(--gold); filter: brightness(1.05); }
 
 /* ---------- Rules modal ---------- */
 .rules-link {
@@ -710,7 +710,7 @@ strong { font-weight: 600; }
   transition: background var(--ease), color var(--ease);
 }
 
-.rules-link:hover { background: var(--brand); color: #fff; }
+.rules-link:hover { background: var(--brand); color: var(--gold); }
 
 .rules-modal {
   border: none;
@@ -724,7 +724,7 @@ strong { font-weight: 600; }
 }
 
 .rules-modal::backdrop {
-  background: rgba(107, 26, 18, 0.55);
+  background: rgba(154, 18, 8, 0.6);
   backdrop-filter: blur(2px);
 }
 
@@ -768,31 +768,31 @@ strong { font-weight: 600; }
 .menu-image {
   width: 100%;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
 }
 
 /* Tiffin section button uses the same pill style as .rules-link */
 .section.tiffin .rules-link {
-  border-color: var(--whatsapp);
-  color: var(--whatsapp-deep);
+  border-color: var(--brand);
+  color: var(--brand-deep);
 }
 
 .section.tiffin .rules-link:hover {
-  background: var(--whatsapp);
-  color: #fff;
+  background: var(--brand);
+  color: var(--gold);
 }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: linear-gradient(160deg, var(--brand-deep), #4a0e08);
-  color: #fde3d8;
+  background: linear-gradient(160deg, var(--brand-deep), #6b0c06);
+  color: var(--gold);
   padding: var(--space-5) 0 var(--space-4);
   text-align: center;
 }
 
 .site-footer p { margin: 0 0 var(--space-1); }
-.footer-note { color: #f2b8a6; font-size: var(--text-sm); }
+.footer-note { color: var(--gold-soft); font-size: var(--text-sm); }
 
 /* ---------- Reveal ---------- */
 .reveal {
